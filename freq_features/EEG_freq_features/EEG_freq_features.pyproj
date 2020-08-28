@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f74d1d8e-9ecb-4037-ae15-89b53e243d7e}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>EEG_freq_features.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>CondaEnv|CondaEnv|TensorFlow-GPU-1.14</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="pic\alpha.png" />
+    <Content Include="pic\beta.png" />
+    <Content Include="pic\delta.png" />
+    <Content Include="pic\gamma.png" />
+    <Content Include="pic\theta.png" />
+    <Content Include="test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EEG_freq_features.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pic" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|mne" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|opencv-GPU" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|TensorFlow-GPU-1.14" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
